@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Symptom Checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>Healthcare Symptom Checker</h1>
+            <p>Get personalized health guidance</p>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message">
+                Hello! I'm your healthcare assistant. Before we begin, could you tell me your name?
+            </div>
+            <div class="options-container" id="initialOptions">
+                <button class="option-button">Skip this step</button>
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Type your response here...">
+            <button id="sendButton">Send</button>
+            
+        </div>
+        <div class="disclaimer">
+            <p>This is not a substitute for professional medical advice. In case of emergency, call emergency services immediately.</p>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
